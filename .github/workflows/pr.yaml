@@ -1,0 +1,22 @@
+name: PR check
+on:
+  - pull_request
+
+jobs:
+  check:
+    run-on: debian-latest
+    default: 
+      shell: bash
+      working-directory: ./appdemo
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run:
+          pip3 install -r requirements.txt
+
+      - name: Run test
+        run:
+          pytest test/test.py
+
