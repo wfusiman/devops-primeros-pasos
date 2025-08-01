@@ -4,7 +4,7 @@ on:
 
 jobs:
   check:
-    run-on: debian-latest
+    runs-on: debian-latest
     default: 
       shell: bash
       working-directory: ./appdemo
