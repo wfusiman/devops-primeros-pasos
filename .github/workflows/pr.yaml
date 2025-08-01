@@ -5,10 +5,12 @@ on:
 jobs:
   check:
     runs-on: debian-latest
-    default: 
-      shell: bash
-      working-directory: ./appdemo
-    steps: 
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./appdemo
+    
+    steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
