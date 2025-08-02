@@ -18,6 +18,7 @@ def root():
 @app.get("/status", status_code=status.HTTP_200_OK)
 def get_stores():
     """Return status"""
+    print('hola')
     return {"status":"healthy", "version":VERSION}
 
 #Stores
